@@ -10,7 +10,7 @@ function App () {
     <>
       <Header />
       <Gallery />
-      <Footer />
+      <Footer title="Charlie Arriaga"/>
     </>
   )
 }
