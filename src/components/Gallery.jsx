@@ -13,8 +13,8 @@ function Gallery() {
     return (
         <>
             <Container>
-                <Row xs={1} md={4} styles={{ width: '15rem'}}>
-                    {/* <Col styles={{ width: '18rem' }}> */}
+                <Row xs={1} md={4} styles={{ width: 'auto'}}>
+                    <Col>
                         {items.map((item, index) => {
 
                             return <Beasts
@@ -29,7 +29,7 @@ function Gallery() {
                         }
                         )
                         }
-                    {/* </Col> */}
+                    </Col>
                 </Row>
             </Container>
 

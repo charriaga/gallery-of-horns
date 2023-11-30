@@ -13,11 +13,11 @@ function Beasts(props) {
     }
 
     return (
-        <Card style={{width: '80%'}}>
-            <Card.Title>{props.title}</Card.Title>
-            <Card.Img src={props.imageURL} alt={props.title}></Card.Img>
-            <Card.Text id='Heart' onClick={counter}>&#9829; {favCount}</Card.Text>
-            <Card.Text>{props.description}</Card.Text>
+        <Card>
+            <Card.Title className='cardTitle'>{props.title}</Card.Title>
+            <Card.Img src={props.imageURL} alt={props.title} className='cardImg'></Card.Img>
+            <Card.Text className='cardHeart' onClick={counter}>&#9829; {favCount}</Card.Text>
+            <Card.Text className='cardDescription'>{props.description}</Card.Text>
         </Card>
 
     );
