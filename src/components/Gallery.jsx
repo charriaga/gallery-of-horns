@@ -1,9 +1,41 @@
-import Beasts from './Beasts'
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
+import Beasts from './Beasts.jsx'
+import items from './data.json'
+
+
 
 function Gallery() {
+    console.log(items)
     return (
         <>
-            <Beasts />
+            <Container>
+                <Row xs={1} md={4} styles={{ width: '15rem'}}>
+                    {/* <Col styles={{ width: '18rem' }}> */}
+                        {items.map((item, index) => {
+
+                            return <Beasts
+                                key={index}
+                                title={item.title}
+                                imageURL={item.image_url}
+                                description={item.description}
+                                keyword={item.keyword}
+                                horns={item.horns}
+                                beastFavNum={0}
+                            />
+                        }
+                        )
+                        }
+                    {/* </Col> */}
+                </Row>
+            </Container>
+
+
+
+
         </>
     )
 }

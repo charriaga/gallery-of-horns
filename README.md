@@ -15,7 +15,16 @@ Estimate of time needed to complete: 45 min
 
 Start time: 4:05
 
-Finish time: _____
+Finish time: 3:27 next day
 
-Actual time needed to complete: _____
+Actual time needed to complete: so many hours
 
+- **Feature 2: Allow Users to Favorite Individual Beasts**
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 4:01
+
+Finish time: 4:15
+
+Actual time needed to complete: 14 min
