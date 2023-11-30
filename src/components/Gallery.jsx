@@ -1,28 +1,41 @@
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
+import Beasts from './Beasts.jsx'
+import items from './data.json'
+
+
+
 function Gallery() {
-
-    function HornedBeasts({ title, imageURL, description }) {
-
-        return (
-            <>
-                <h2>{title}</h2>
-                <img src={imageURL} alt={title} title={title} />
-                <p>{description}</p>
-            </>
-        );
-    }
-
+    console.log(items)
     return (
         <>
-            <HornedBeasts
-                title={"Cyberpunk Chick"}
-                imageURL={"src/components/img/Perspective.png"}
-                description={"A Cyberpunk Chick"}
-            />
-            <HornedBeasts
-                title={"Self Portrait"}
-                imageURL={"src/components/img/Self portrait.png"}
-                description={"A Self Portrait"}
-            />
+            <Container>
+                <Row xs={1} md={4} styles={{ width: 'auto'}}>
+                    <Col>
+                        {items.map((item, index) => {
+
+                            return <Beasts
+                                key={index}
+                                title={item.title}
+                                imageURL={item.image_url}
+                                description={item.description}
+                                keyword={item.keyword}
+                                horns={item.horns}
+                                beastFavNum={0}
+                            />
+                        }
+                        )
+                        }
+                    </Col>
+                </Row>
+            </Container>
+
+
+
+
         </>
     )
 }
