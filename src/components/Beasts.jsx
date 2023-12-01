@@ -2,6 +2,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import CardModal from './CardModal';
+import '../App.css'
 import { useState } from 'react';
 
 
@@ -12,7 +13,17 @@ function Beasts(props) {
         setFavCount(favCount => beastFavNum = favCount + 1);
         return beastFavNum;
     }
-    
+
+    const [showCardModal, setShowCardModal] = useState(false);
+
+    function cardModalHandler() {
+        setShowCardModal(true);
+    }
+
+    function closeCardModalHandler() {
+        setShowCardModal(false);
+    }
+
 
     return (
         <>
@@ -22,12 +33,17 @@ function Beasts(props) {
                     src={props.imageURL}
                     alt={props.title}
                     className='cardImg'
-                    onClick={props.cardModalHandler}
+                    onClick={cardModalHandler}
                 ></Card.Img>
                 <Card.Text className='cardHeart' onClick={counter}>&#9829; {favCount}</Card.Text>
                 <Card.Text className='cardDescription'>{props.description}</Card.Text>
             </Card>
 
+            <CardModal
+                imageURL={props.imageURL}
+                title={props.title}
+                description={props.description}
+                show={showCardModal} onClose={closeCardModalHandler} />
         </>
     );
 }
