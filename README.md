@@ -38,3 +38,15 @@ Start time: 4:24
 Finish time: 4:30
 
 Actual time needed to complete: 6
+
+## Lab 3 Time Predictions
+
+- **Feature 1: Modal**
+
+Estimate of time needed to complete: 40min
+
+Start time: 4:42
+
+Finish time:
+
+Actual time needed to complete:
