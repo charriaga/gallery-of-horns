@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import items from './components/data.json';
+import HornFilter from './components/HornFilter'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,9 +11,9 @@ function App() {
   return (
     <>
       <Header />
-      <Gallery imageURL={items.image_url} title={items.title} description={items.description} key={items._id}/>
+      <HornFilter horns={items.horns}/>
       <Footer title="Charlie Arriaga" />
-
+      <Gallery />
     </>
   )
 }

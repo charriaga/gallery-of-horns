@@ -4,25 +4,26 @@ import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-import Beasts from './Beasts.jsx';
+import Beasts from './Beasts'
 import items from './data.json'
 
 function Gallery(props) {
 
+
     return (
         <>
             <Container>
-                <Row xs={1} md={4} styles={{ width: 'auto' }}>
+                <Row xs={1} md={4}>
                     <Col>
-                        {items.map((prop, index) => {
+                        {props.itemRender.map((item, index) => {
                             return <>
                                 <Beasts
                                     key={index}
-                                    title={prop.title}
-                                    imageURL={prop.image_url}
-                                    description={prop.description}
-                                    keyword={prop.keyword}
-                                    horns={prop.horns}
+                                    title={item.title}
+                                    imageURL={item.image_url}
+                                    description={item.description}
+                                    keyword={item.keyword}
+                                    horns={item.horns}
                                     beastFavNum={0}
                                 />
                             </>

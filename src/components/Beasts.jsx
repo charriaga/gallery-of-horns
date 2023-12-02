@@ -27,7 +27,7 @@ function Beasts(props) {
 
     return (
         <>
-            <Card>
+            <Card className={props.horns}>
                 <Card.Title className='cardTitle'>{props.title}</Card.Title>
                 <Card.Img
                     src={props.imageURL}

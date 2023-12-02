@@ -1,11 +1,9 @@
 Card {
   display: flex;
-  flex: 3;
 }
 
 Row {
     display: flex;
-    flex: 3;
 
 }
 
